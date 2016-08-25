@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  resources :departamentos
     # resources cria todas as rotas automaticamente
-    resources :produtos, only: [:new, :create, :destroy]
+    resources :produtos, only: [:new, :create, :destroy, :edit, :update]
     get "produtos/busca" => "produtos#busca", as: :busca_produto
 
     #get "/produtos/new" => "produtos#new"

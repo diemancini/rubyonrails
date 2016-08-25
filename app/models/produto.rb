@@ -1,5 +1,8 @@
 class Produto < ActiveRecord::Base
 
-	validates :quantidade, presence: true
+	belongs_to :departamento
 
+	validates :quantidade, presence: true
+	validates :nome, length: {minimum: 2}
+	
 end
